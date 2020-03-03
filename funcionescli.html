@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module funcionescli</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>funcionescli</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/a18guillermolc/Empresa/funcionescli.py">/home/a18guillermolc/Empresa/funcionescli.py</a></font></td></tr></table>
+    <p><tt>Modulo&nbsp;que&nbsp;gestiona&nbsp;los&nbsp;clientes<br>
+este&nbsp;modulo&nbsp;contiene&nbsp;las&nbsp;funciones&nbsp;siguientes:<br>
+limpiarentry<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fila:&nbsp;contiene&nbsp;un&nbsp;listado&nbsp;de&nbsp;widgets&nbsp;de&nbsp;clientes&nbsp;que&nbsp;vamos&nbsp;a&nbsp;limpiar&nbsp;tras&nbsp;ejecutar&nbsp;un&nbsp;evento<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return:&nbsp;nada</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="conexion.html">conexion</a><br>
+</td><td width="25%" valign=top><a href="sqlite3.html">sqlite3</a><br>
+</td><td width="25%" valign=top><a href="variables.html">variables</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-apelnomfac"><strong>apelnomfac</strong></a>(dni)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;buscar&nbsp;el&nbsp;apellido&nbsp;y&nbsp;nombres&nbsp;de&nbsp;un&nbsp;cliente&nbsp;a&nbsp;traves&nbsp;del&nbsp;dni&nbsp;recibido<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;dni&nbsp;cliente<br>
+@return:&nbsp;apellido&nbsp;y&nbsp;nombre</tt></dd></dl>
+ <dl><dt><a name="-bajacli"><strong>bajacli</strong></a>(dni)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;dar&nbsp;de&nbsp;baja&nbsp;un&nbsp;cliente&nbsp;registrado&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;dni&nbsp;cliente<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-insertarcli"><strong>insertarcli</strong></a>(fila)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;insertar&nbsp;un&nbsp;cliente<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;datos&nbsp;necesarios&nbsp;para&nbsp;la&nbsp;insercion&nbsp;de&nbsp;un&nbsp;cliente<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-limpiarentry"><strong>limpiarentry</strong></a>(fila)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;limpiar&nbsp;la&nbsp;entrada&nbsp;de&nbsp;datos&nbsp;de&nbsp;los&nbsp;clientes<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;fila<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-listadocli"><strong>listadocli</strong></a>(listclientes)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;listar&nbsp;todos&nbsp;los&nbsp;clientes&nbsp;en&nbsp;el&nbsp;treeView&nbsp;de&nbsp;clientes<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;listclientes<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-listar"><strong>listar</strong></a>()</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;listar&nbsp;todos&nbsp;los&nbsp;clientes&nbsp;registrados&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;nada<br>
+@return:&nbsp;listado&nbsp;de&nbsp;clientes</tt></dd></dl>
+ <dl><dt><a name="-modifcli"><strong>modifcli</strong></a>(registro, cod)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;modificar&nbsp;los&nbsp;datos&nbsp;de&nbsp;un&nbsp;cliente<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;datos&nbsp;del&nbsp;cliente&nbsp;a&nbsp;modificar&nbsp;,&nbsp;codigo&nbsp;cliente.<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-selectcli"><strong>selectcli</strong></a>(dni)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;seleccionar&nbsp;un&nbsp;cliente&nbsp;buscandolo&nbsp;a&nbsp;traves&nbsp;de&nbsp;su&nbsp;dni<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;dni&nbsp;cliente<br>
+@return:&nbsp;id&nbsp;cliente</tt></dd></dl>
+ <dl><dt><a name="-validoDNI"><strong>validoDNI</strong></a>(dni)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;validar&nbsp;el&nbsp;dni&nbsp;del&nbsp;cliente<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;dni&nbsp;cliente<br>
+@return:&nbsp;boolean,&nbsp;True&nbsp;si&nbsp;es&nbsp;valido,&nbsp;False&nbsp;si&nbsp;no&nbsp;lo&nbsp;es.</tt></dd></dl>
+</td></tr></table>
+</body></html>

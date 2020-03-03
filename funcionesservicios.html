@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module funcionesservicios</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>funcionesservicios</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/a18guillermolc/Empresa/funcionesservicios.py">/home/a18guillermolc/Empresa/funcionesservicios.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="conexion.html">conexion</a><br>
+</td><td width="25%" valign=top><a href="sqlite3.html">sqlite3</a><br>
+</td><td width="25%" valign=top><a href="variables.html">variables</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-altanuevoservicio"><strong>altanuevoservicio</strong></a>()</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;dar&nbsp;de&nbsp;alta&nbsp;un&nbsp;nuevo&nbsp;servicio&nbsp;recogiendo&nbsp;los&nbsp;datos&nbsp;desde&nbsp;los&nbsp;entries<br>
+de&nbsp;nuevos&nbsp;servicios<br>
+&nbsp;<br>
+@param&nbsp;nada<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-altaservicio"><strong>altaservicio</strong></a>(fila)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;dar&nbsp;de&nbsp;alta&nbsp;un&nbsp;nuevo&nbsp;servicio&nbsp;recogiendo&nbsp;los&nbsp;datos&nbsp;desde&nbsp;los&nbsp;entries<br>
+&nbsp;&nbsp;&nbsp;&nbsp;de&nbsp;nuevos&nbsp;servicios<br>
+&nbsp;<br>
+@param&nbsp;nada<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-altaservicioadicional"><strong>altaservicioadicional</strong></a>()</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;dar&nbsp;de&nbsp;alta&nbsp;servicios&nbsp;adicionales<br>
+@param&nbsp;nada<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-bajaservicio"><strong>bajaservicio</strong></a>(fila)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;dar&nbsp;de&nbsp;baja&nbsp;un&nbsp;servicio&nbsp;a&nbsp;traves&nbsp;de&nbsp;pasarle&nbsp;la&nbsp;fila&nbsp;de&nbsp;datos&nbsp;que&nbsp;contiene<br>
+el&nbsp;codigo&nbsp;del&nbsp;servicio&nbsp;y&nbsp;de&nbsp;la&nbsp;reserva<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@param&nbsp;fila&nbsp;con&nbsp;servicio&nbsp;y&nbsp;reserva<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-buscarprecioservicio"><strong>buscarprecioservicio</strong></a>(cod)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;buscar&nbsp;el&nbsp;precio&nbsp;del&nbsp;servicio&nbsp;recibido&nbsp;a&nbsp;traves&nbsp;de&nbsp;su&nbsp;codigo<br>
+&nbsp;<br>
+@param&nbsp;codigo&nbsp;servicio<br>
+@return:&nbsp;precio&nbsp;servicio</tt></dd></dl>
+ <dl><dt><a name="-buscarservicio"><strong>buscarservicio</strong></a>(servicio)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;buscar&nbsp;el&nbsp;codigo&nbsp;del&nbsp;servicio&nbsp;recibido&nbsp;a&nbsp;traves&nbsp;de&nbsp;su&nbsp;nombre<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;nombre&nbsp;servicio<br>
+@return:&nbsp;codigo&nbsp;servicio</tt></dd></dl>
+ <dl><dt><a name="-buscarservicioadicional"><strong>buscarservicioadicional</strong></a>(servicio)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;buscar&nbsp;si&nbsp;existe&nbsp;el&nbsp;servicio&nbsp;recibido&nbsp;como&nbsp;parametro<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;nombre&nbsp;del&nbsp;servicio<br>
+@return:&nbsp;boolean:&nbsp;True&nbsp;si&nbsp;existe,&nbsp;False&nbsp;si&nbsp;no&nbsp;existe</tt></dd></dl>
+ <dl><dt><a name="-buscarservicioporcodigo"><strong>buscarservicioporcodigo</strong></a>(servicio)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;buscar&nbsp;el&nbsp;nombre&nbsp;y&nbsp;el&nbsp;precio&nbsp;del&nbsp;servicio,&nbsp;recibiendo&nbsp;su&nbsp;codigo&nbsp;como&nbsp;parametro<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;codigo&nbsp;servicio<br>
+@return:&nbsp;conjunto&nbsp;de&nbsp;servicios&nbsp;de&nbsp;serviciosreservas</tt></dd></dl>
+ <dl><dt><a name="-buscarserviciosreservas"><strong>buscarserviciosreservas</strong></a>(reserva)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;buscar&nbsp;los&nbsp;servicios&nbsp;asociados&nbsp;a&nbsp;la&nbsp;reserva&nbsp;que&nbsp;se&nbsp;le&nbsp;pasa&nbsp;al&nbsp;metodo<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;codigo&nbsp;reserva<br>
+@return:&nbsp;conjunto&nbsp;de&nbsp;servicios&nbsp;de&nbsp;serviciosreservas</tt></dd></dl>
+ <dl><dt><a name="-limpiarlbls"><strong>limpiarlbls</strong></a>()</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;vaciar&nbsp;las&nbsp;labels&nbsp;del&nbsp;grid&nbsp;de&nbsp;facturas<br>
+&nbsp;<br>
+@param&nbsp;&nbsp;nada<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-listadoser"><strong>listadoser</strong></a>(list)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;listar&nbsp;todos&nbsp;los&nbsp;servicios&nbsp;recogidos&nbsp;en&nbsp;variables.listado<br>
+&nbsp;<br>
+@param&nbsp;lista&nbsp;de&nbsp;servicios<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-listarser"><strong>listarser</strong></a>()</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;recoger&nbsp;los&nbsp;servicios&nbsp;registrados&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos<br>
+&nbsp;<br>
+@param&nbsp;nada<br>
+@return:&nbsp;listado&nbsp;de&nbsp;servicios</tt></dd></dl>
+ <dl><dt><a name="-listaserviciosprecios"><strong>listaserviciosprecios</strong></a>()</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;cargar&nbsp;los&nbsp;precios&nbsp;de&nbsp;los&nbsp;servicios&nbsp;basicos<br>
+en&nbsp;las&nbsp;entradas&nbsp;de&nbsp;datos&nbsp;de&nbsp;precios&nbsp;de&nbsp;esos&nbsp;servicios<br>
+&nbsp;<br>
+@param&nbsp;nada<br>
+@return:&nbsp;nada</tt></dd></dl>
+ <dl><dt><a name="-modifprecioservicio"><strong>modifprecioservicio</strong></a>()</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;actualizar&nbsp;el&nbsp;precio&nbsp;a&nbsp;los&nbsp;servicios&nbsp;basicos<br>
+&nbsp;<br>
+@param&nbsp;nada<br>
+@return:&nbsp;nada</tt></dd></dl>
+</td></tr></table>
+</body></html>
