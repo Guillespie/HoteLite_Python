@@ -68,6 +68,21 @@ def listar():
     @return: listado de clientes
     '''
     try:
+        conexion.cur.execute('select * from clientes')
+        listado = conexion.cur.fetchall()
+        conexion.conex.commit()
+        return listado
+    except sqlite3.OperationalError as e:
+        print(e)
+        conexion.conex.rollback()
+def listarApel():
+    '''
+    Se encarga de listar todos los clientes registrados en la base de datos
+
+    @param  nada
+    @return: listado de clientes
+    '''
+    try:
         conexion.cur.execute('select * from clientes order by apel')
         listado = conexion.cur.fetchall()
         conexion.conex.commit()

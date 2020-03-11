@@ -530,6 +530,11 @@
     <property name="can_focus">False</property>
     <property name="pixbuf">img/simpl.jpg</property>
   </object>
+  <object class="GtkImage" id="left">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">img/left-arrow(1).png</property>
+  </object>
   <object class="GtkListStore" id="listClientes">
     <columns>
       <!-- column-name dni -->
@@ -599,6 +604,11 @@
       <!-- column-name Habitacion -->
       <column type="gint"/>
     </columns>
+  </object>
+  <object class="GtkImage" id="right">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">img/right-arrow(1).png</property>
   </object>
   <object class="GtkWindow" id="venPrincipal">
     <property name="can_focus">False</property>
@@ -2227,12 +2237,14 @@
                     </child>
                     <child>
                       <object class="GtkButton" id="altaServiciosAdicionales">
-                        <property name="label" translatable="yes">Alta</property>
                         <property name="width_request">83</property>
                         <property name="height_request">42</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <property name="image">right</property>
+                        <property name="image_position">right</property>
+                        <property name="always_show_image">True</property>
                         <signal name="clicked" handler="on_altaServiciosAdicionales_clicked" swapped="no"/>
                       </object>
                       <packing>
@@ -2258,12 +2270,12 @@
                     </child>
                     <child>
                       <object class="GtkButton" id="btnBajaServicioAdicional">
-                        <property name="label" translatable="yes">Baja</property>
                         <property name="width_request">83</property>
                         <property name="height_request">42</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <property name="image">left</property>
                         <signal name="clicked" handler="on_btnBajaServicioAdicional_clicked" swapped="no"/>
                       </object>
                       <packing>

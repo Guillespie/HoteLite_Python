@@ -766,6 +766,7 @@ class Eventos():
             variables.dialogNuevosServicios.hide()
             funcionesservicios.listadoser(variables.listServicios)
 
+
         except:
             print('error al dar de alta un servicio nuevo al hotel')
 
@@ -801,8 +802,8 @@ class Eventos():
 
                         concepto = 'alojamiento'
                         servicio = funcionesservicios.buscarservicio(concepto)
-
                         servicios = funcionesservicios.buscarserviciosreservas(codRes)
+
                         if (servicio in servicios):
                             variables.entradaServicios[4].set_text('Servicio ya registrado')
 
@@ -814,6 +815,7 @@ class Eventos():
                             variables.entradaServicios[0].set_text('')
                             facturacion.cargargridfactura(datosfactura)
                             variables.entradaServicios[4].set_text('')
+
                         if (numDesayuno in servicios):
                             fila = (numDesayuno[0], codRes)
                             funcionesservicios.bajaservicio(fila)
@@ -822,7 +824,6 @@ class Eventos():
                             variables.entradaServicios[0].set_text('')
                             facturacion.cargargridfactura(datosfactura)
                             variables.entradaServicios[4].set_text('')
-
 
                     if variables.rbtnServicios[1].get_active():
                         concepto = 'desayuno'
@@ -957,7 +958,7 @@ class Eventos():
         @return:
         '''
         try:
-            concepto = variables.entradaServicios[0].get_text().lower()
+            concepto = variables.entradaServicios[0].get_text()
             diaout = variables.filareserva[3].get_text()
             date_out = datetime.strptime(diaout, '%d/%m/%Y').date()
             today = date.today()
@@ -1073,7 +1074,7 @@ class Eventos():
             lista.line(50, 730, 540, 730)
 
 
-            listado = funcionescli.listar()
+            listado = funcionescli.listarApel()
             y = 710
             pagina = 1
             for registro in listado:
