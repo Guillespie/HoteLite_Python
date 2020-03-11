@@ -68,7 +68,7 @@ def listar():
     @return: listado de clientes
     '''
     try:
-        conexion.cur.execute('select * from clientes')
+        conexion.cur.execute('select * from clientes order by apel')
         listado = conexion.cur.fetchall()
         conexion.conex.commit()
         return listado

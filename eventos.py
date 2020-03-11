@@ -796,7 +796,7 @@ class Eventos():
             numComida = funcionesservicios.buscarservicio('comida')
             numAlojamiento = funcionesservicios.buscarservicio('alojamiento')
             if noches <= 0:
-                if variables.entradaServicios[1].get_text() != (''):
+                if variables.entradaServicios[1].get_text() != '':
                     if variables.rbtnServicios[0].get_active():
 
                         concepto = 'alojamiento'
@@ -1063,10 +1063,10 @@ class Eventos():
             lista = canvas.Canvas('clientes.pdf', pagesize=A4)
             lista.setTitle('LISTADO DE CLIENTES')
             lista.setFont('Helvetica-Bold', size=16)
-            lista.drawString(230, 780, 'LISTADO CLIENTES')
+            lista.drawString(200, 780, 'LISTADO CLIENTES')
             lista.setFont('Helvetica-Bold', size=12)
-            lista.drawString(50, 740, 'NOMBRE')
-            lista.drawString(250, 740, 'APELLIDOS')
+            lista.drawString(50, 740, 'APELLIDOS')
+            lista.drawString(250, 740, 'NOMBRE')
             lista.drawString(450, 740, 'DNI')
             lista.line(50, 760, 540, 760)
             lista.setFont('Helvetica', size=8)
@@ -1076,39 +1076,42 @@ class Eventos():
             listado = funcionescli.listar()
             y = 710
             pagina = 1
-            cambiado = True
             for registro in listado:
 
-                if y > 10:
-                    lista.drawString(50, y, registro[3])
-                    lista.drawString(250, y, registro[2])
-                    lista.drawString(450, y, registro[1])
-                    lista.line(50, y-2, 540, y-2)
-                    y = y - 10
+                if y > 40:
+                    lista.drawString(50, y, registro[2])
+                    lista.drawString(250, y, registro[3])
+                    dni = "• • • • • • " + str(registro[1])[6:]
+                    lista.drawString(450, y, dni)
+                    # lista.line(50, y-2, 540, y-2)
+                    y = y - 15
                 else:
-                    if cambiado:
-                        lista.showPage()
-                        canvas.Canvas._pageNumber = pagina + 1
-                        y = 710
-                        lista.setFont('Helvetica-Bold', size=16)
-                        lista.setFont('Helvetica-Bold', size=12)
-                        lista.drawString(50, 740, 'NOMBRE')
-                        lista.drawString(250, 740, 'APELLIDOS')
-                        lista.drawString(450, 740, 'DNI')
-                        lista.line(50, 760, 540, 760)
-                        lista.setFont('Helvetica', size=8)
-                        lista.line(50, 730, 540, 730)
+
+                    lista.showPage()
+                    canvas.Canvas._pageNumber = pagina + 1
+                    y = 710
+                    lista.setFont('Helvetica-Bold', size=16)
+                    lista.drawString(200, 780, 'LISTADO CLIENTES')
+                    lista.drawString(550, 25, str(canvas.Canvas.getPageNumber(lista)))
+                    lista.setFont('Helvetica-Bold', size=16)
+                    lista.setFont('Helvetica-Bold', size=12)
+                    lista.drawString(50, 740, 'APELLIDOS')
+                    lista.drawString(250, 740, 'NOMBRE')
+                    lista.drawString(450, 740, 'DNI')
+                    lista.line(50, 760, 540, 760)
                     lista.setFont('Helvetica', size=8)
-                    lista.drawString(50, y, registro[3])
-                    lista.drawString(250, y, registro[2])
-                    lista.drawString(450, y, registro[1])
-                    lista.line(50, y - 2, 540, y - 2)
-                    cambiado = False
-                    y = y - 10
+                    lista.line(50, 730, 540, 730)
+                    lista.setFont('Helvetica', size=8)
+                    dni = "• • • • • • " + str(registro[1])[6:]
+                    lista.drawString(450, y, dni)
+                    lista.drawString(50, y, registro[2])
+                    lista.drawString(250, y, registro[3])
+                    lista.drawString(450, y, dni)
+                    # lista.line(50, y - 2, 540, y - 2)
 
+                    y = y - 15
 
-
-
+            canvas.Canvas._pageNumber = 1
             lista.showPage()
 
             lista.save()
